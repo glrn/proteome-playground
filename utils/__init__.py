@@ -28,3 +28,12 @@ def proteins_are_dissimilar(protNameA, protNameB, protA, protB):
     else:
         dissimilarity_mapping[(protNameA, protNameB)] = False
         return False
+
+
+def hamdist(str1, str2):
+    """Count the # of differences between equal length strings str1 and str2"""
+    diffs = 0
+    for ch1, ch2 in zip(str1, str2):
+        if ch1 != ch2:
+            diffs += 1
+    return diffs

@@ -2,6 +2,7 @@ import csv
 import networkx as nx
 # local imports
 import params
+import utils
 
 class Kmer:
     def __init__(self, kmer, gene_count, genes):
@@ -25,11 +26,11 @@ G = nx.Graph()
 G.add_nodes_from([k.kmer for k in kmers])
 
 for i in xrange(len(G.nodes())):
-    for j in xrange(i, len(G.nodes())):
-        import random
-        p = random.uniform(0, 1)
-        if p > 0.99:
-            G.add_edge(G.nodes()[i], G.nodes()[j])
+    for j in xrange(i+1, len(G.nodes())):
+        kmerA, kmerB = G.nodes()[i], G.nodes()[j]
+        # decide if there should be an edge between kmerA and kmerB
+        if utils.hamdist(kmerA, kmerB) <=5:
+            G.add_edge(kmerA, kmerB)
 
 print G.nodes()
 
