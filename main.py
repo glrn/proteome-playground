@@ -62,3 +62,24 @@ for prot in all_proteins:
         if not redundantProt:
             kmers_frequency[kmer].add(prot.geneName)
         redundantProt = False
+
+print "Sorting frequent k-mers by frequency..."
+most_frequenct_kmers = sorted(kmers_frequency, key=lambda k: len(kmers_frequency[k]), reverse=True)
+
+print "Writing results to file..."
+import datetime, time, csv
+timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H%M%S')
+outfile = 'outputs/frequent k{}-mers - {}.csv'.format(params.K, timestamp)
+with open(outfile, "wb") as csv_file:
+        writer = csv.writer(csv_file, delimiter=',')
+        writer.writerow(['k-mer','number of proteins','all'])
+
+        for kmer in most_frequenct_kmers:
+            total_proteins = len(kmers_frequency[kmer])
+            if total_proteins < 5:
+                break
+            geneList = list(kmers_frequency[kmer])
+            #geneList = '\r\n'.join(geneList)
+            row = [kmer, total_proteins, geneList]
+            writer.writerow(row)
+
