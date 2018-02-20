@@ -1,4 +1,5 @@
 import csv
+import ast
 import networkx as nx
 # local imports
 import params
@@ -19,6 +20,7 @@ with open(params.FREQUENT_KMERS, 'rb') as kmercsv:
     for row in csvreader:
         kmer, gene_count, genes = row
         gene_count = int(gene_count)
+        genes = ast.literal_eval(genes)
         if gene_count >= 10:
             kmers.append(Kmer(kmer, gene_count, genes))
             gene_count_dict[kmer] = gene_count
@@ -34,10 +36,18 @@ for i in xrange(len(G.nodes())):
         if utils.hamdist(kmerA, kmerB) <= params.MIN_HAM_DIST:
             G.add_edge(kmerA, kmerB)
 
+# output info on connected components
+for c in nx.connected_components(G):
+    if len(c) > 10:
+        print c
+
 # plot graph
 import matplotlib.pyplot as plt
 color_values = [90 - gene_count_dict[kmer] for kmer in G.nodes()]
-plt.figure(figsize=(20,15))
-nx.draw(G, with_labels=True, node_color=color_values, vmin=5, vmax=86, cmap=plt.cm.Reds_r)
+plt.figure(figsize=(20, 15))
+nx.draw(G, with_labels=True, node_color=color_values, vmin=5, vmax=86,cmap=plt.cm.Reds_r)
 
-plt.savefig('outputs/graph - edges for hamming distance %s.png' % params.MIN_HAM_DIST)
+if params.SHOULD_SAVEFIG:
+    plt.savefig('outputs/graph - edges for hamming distance %s.png' % params.MIN_HAM_DIST)
+else:
+    plt.show()
