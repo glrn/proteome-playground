@@ -20,6 +20,18 @@ class Protein:
                 self.kmers[kmer] = 0
             self.kmers[kmer] += 1
 
+        # consider only kmers that appear more than once in their protein,
+        self.repeating_non_overlapping_kmers = \
+            [kmer for kmer in self.kmers if
+             self.kmers[kmer] >= params.MIN_REPETITIONS_IN_PROTEIN]
+        # remove SAARs
+        # self.repeating_non_overlapping_kmers = [kmer for kmer in self.repeating_non_overlapping_kmers if len(set([c for c in kmer])) > 1]
+        # consider only kmers where there are two occurrences that are distanced
+        # from each other (in particular, non overlapping)
+        self.repeating_non_overlapping_kmers  = [kmer for kmer in self.repeating_non_overlapping_kmers if
+                                 self.seq.find(kmer) + params.MIN_DIST_BETWEEN_REPETITIONS <
+                                    self.seq.rfind(kmer)]
+
 
 all_proteins = list() # all_proteins[i] = PROTEIN()_OBJECT
 protein_seq = dict() # protein_seq[GENE_NAME] = AMINO_ACID_SEQUENCE
@@ -51,20 +63,8 @@ for prot in all_proteins:
     i += 1
     pb.update_progress(i, len(all_proteins))
 
-    # consider only kmers that appear more than once in their protein,
-    self_repeating_kmers = \
-        [kmer for kmer in prot.kmers if prot.kmers[kmer] >= params.MIN_REPETITIONS_IN_PROTEIN]
 
-    # remove SAARs
-    # self_repeating_kmers = [kmer for kmer in self_repeating_kmers if len(set([c for c in kmer])) > 1]
-
-    # consider only kmers where there are two occurrences that are distanced
-    # from each other (in particular, non overlapping)
-    self_repeating_kmers  = [kmer for kmer in self_repeating_kmers if
-                             prot.seq.find(kmer) + params.MIN_DIST_BETWEEN_REPETITIONS <
-                                prot.seq.rfind(kmer)]
-
-    for kmer in self_repeating_kmers:
+    for kmer in prot.repeating_non_overlapping_kmers:
 
         if kmer not in kmers_frequency:
             kmers_frequency[kmer] = set()
