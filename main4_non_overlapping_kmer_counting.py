@@ -12,7 +12,13 @@ class Protein:
     def __init__(self, geneName, sequence, k):
         self.geneName = geneName
         self.seq = sequence
-        self.kmers = set([self.seq[i:i+k] for i in xrange(len(self.seq)-k)])
+        all_kmers = list([self.seq[i:i+k] for i in xrange(len(self.seq)-k)])
+        self.kmers = {} # self.kmers is a dictionary that counts number of
+                        # occurrences for each kmer in the sequence
+        for kmer in all_kmers:
+            if kmer not in self.kmers:
+                self.kmers[kmer] = 0
+            self.kmers[kmer] += 1
 
 
 all_proteins = list() # all_proteins[i] = PROTEIN()_OBJECT
@@ -38,14 +44,28 @@ for rec in SeqIO.parse(open(params.HUMAN_PROTEOME), 'fasta'):
 print
 print "Counted k-mer (k=%d) for %d different genes (proteins)." % (params.K, len(all_proteins))
 
-pb = Progressbar('Generating frequency dictionary for k-mers')
+pb = Progressbar('Generating frequency dictionary for k-mers that appear more than once in protein')
 kmers_frequency = dict() # track popularity of kmer accross all proteins
 i = 0
 for prot in all_proteins:
     i += 1
     pb.update_progress(i, len(all_proteins))
 
-    for kmer in prot.kmers:
+    # consider only kmers that appear more than once in their protein,
+    self_repeating_kmers = \
+        [kmer for kmer in prot.kmers if prot.kmers[kmer] >= params.MIN_REPETITIONS_IN_PROTEIN]
+
+    # remove SAARs
+    # self_repeating_kmers = [kmer for kmer in self_repeating_kmers if len(set([c for c in kmer])) > 1]
+
+    # consider only kmers where there are two occurrences that are distanced
+    # from each other (in particular, non overlapping)
+    self_repeating_kmers  = [kmer for kmer in self_repeating_kmers if
+                             prot.seq.find(kmer) + params.MIN_DIST_BETWEEN_REPETITIONS <
+                                prot.seq.rfind(kmer)]
+
+    for kmer in self_repeating_kmers:
+
         if kmer not in kmers_frequency:
             kmers_frequency[kmer] = set()
 
@@ -69,7 +89,7 @@ most_frequenct_kmers = sorted(kmers_frequency, key=lambda k: len(kmers_frequency
 print "Writing results to file..."
 import datetime, time, csv
 timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H%M%S')
-outfile = 'outputs/frequent k{}-mers - {}.csv'.format(params.K, timestamp)
+outfile = 'outputs/frequent self-repeating k{}-mers - {}.csv'.format(params.K, timestamp)
 with open(outfile, "wb") as csv_file:
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(['k-mer','number of proteins','all'])
