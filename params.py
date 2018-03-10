@@ -1,9 +1,9 @@
 #Organism name
 #ORGANISM = 'Homo Sapiens'
 #ORGANISM = 'Mus Musculus'
-#ORGANISM = 'Drosophila Melanogaster'
+ORGANISM = 'Drosophila Melanogaster'
 #ORGANISM = 'Danio Rerio'
-ORGANISM = 'Caenorhabditis Elegans'
+#ORGANISM = 'Caenorhabditis Elegans'
 
 OUTPUT_DIR = ORGANISM
 
