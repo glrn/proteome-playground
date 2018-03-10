@@ -21,7 +21,7 @@ with open(params.FREQUENT_KMERS, 'rb') as kmercsv:
         kmer, gene_count, genes = row
         gene_count = int(gene_count)
         genes = ast.literal_eval(genes)
-        if gene_count >= 10:
+        if gene_count >= params.MIN_PROTEINS_FOR_KMER_GRAPH:
             kmers.append(Kmer(kmer, gene_count, genes))
             gene_count_dict[kmer] = gene_count
 
