@@ -1,15 +1,14 @@
-#OUTPUT_DIR = 'Homo Sapiens'
-#OUTPUT_DIR = 'Mus Musculus'
-#OUTPUT_DIR = 'Drosophila melanogaster'
-OUTPUT_DIR = 'Danio rerio'
-#OUTPUT_DIR = 'Caenorhabditis elegans'
+#Organism name
+#ORGANISM = 'Homo Sapiens'
+#ORGANISM = 'Mus Musculus'
+#ORGANISM = 'Drosophila Melanogaster'
+ORGANISM = 'Danio Rerio'
+#ORGANISM = 'Caenorhabditis Elegans'
+
+OUTPUT_DIR = ORGANISM
 
 # For kmer counting
-#PROTEOME_FILE = 'data/Uniprot-Swiss-prot (Homo Sapiens) without fragments.fasta'
-#PROTEOME_FILE = 'data/Uniprot-Swiss-prot (Mus Musculus) without fragments.fasta'
-#PROTEOME_FILE = 'data/Uniprot-Swiss-prot (Drosophila melanogaster) without fragments.fasta'
-PROTEOME_FILE = 'data/Uniprot-Swiss-prot (Danio rerio) without fragments.fasta'
-#PROTEOME_FILE = 'data/Uniprot-Swiss-prot (Caenorhabditis elegans) without fragments.fasta'
+PROTEOME_FILE = 'data/Uniprot-Swiss-prot ({}) without fragments.fasta'.format(ORGANISM)
 K = 10
 
 # For self-repeating kmer counting
