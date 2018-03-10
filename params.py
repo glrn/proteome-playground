@@ -1,5 +1,11 @@
+#OUTPUT_DIR = 'Homo Sapiens'
+OUTPUT_DIR = 'Drosophila melanogaster'
+#OUTPUT_DIR = 'Mus Musculus'
+
 # For kmer counting
-HUMAN_PROTEOME = 'data/Uniprot-Swiss-prot (Homo Sapiens) without fragments.fasta'
+#PROTEOME_FILE = 'data/Uniprot-Swiss-prot (Homo Sapiens) without fragments.fasta'
+PROTEOME_FILE = 'data/Uniprot-Swiss-prot (Drosophila melanogaster) without fragments.fasta'
+#PROTEOME_FILE = 'data/Uniprot-Swiss-prot (Mus Musculus) without fragments.fasta'
 K = 10
 
 # For self-repeating kmer counting

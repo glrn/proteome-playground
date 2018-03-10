@@ -20,7 +20,7 @@ protein_seq = dict() # protein_seq[GENE_NAME] = AMINO_ACID_SEQUENCE
 
 print "Reading Uniprot file and generating k-mers list for each protein..."
 created_protein_names = set() # prevent creation of two similar protein objects
-for rec in SeqIO.parse(open(params.HUMAN_PROTEOME), 'fasta'):
+for rec in SeqIO.parse(open(params.PROTEOME_FILE), 'fasta'):
     seq = str(rec.seq)
     uniqueIdentifier, entryName, proteinName, organismName, geneName = \
         utils.parse_UniProtKB_header(rec.description)
@@ -69,7 +69,7 @@ most_frequenct_kmers = sorted(kmers_frequency, key=lambda k: len(kmers_frequency
 print "Writing results to file..."
 import datetime, time, csv
 timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H%M%S')
-outfile = 'outputs/frequent k{}-mers - {}.csv'.format(params.K, timestamp)
+outfile = 'outputs/{}/frequent k{}-mers - {}.csv'.format(params.OUTPUT_DIR, params.K, timestamp)
 with open(outfile, "wb") as csv_file:
         writer = csv.writer(csv_file, delimiter=',')
         writer.writerow(['k-mer','number of proteins','all'])
