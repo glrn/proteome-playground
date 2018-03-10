@@ -48,6 +48,7 @@ plt.figure(figsize=(20, 15))
 nx.draw(G, with_labels=True, node_color=color_values, vmin=5, vmax=86,cmap=plt.cm.Reds_r)
 
 if params.SHOULD_SAVEFIG:
-    plt.savefig('outputs/graph - edges for hamming distance %s.png' % params.MIN_HAM_DIST)
+    plt.savefig('outputs/{}/graph - edges for hamming distance {}.png'.format(
+        params.OUTPUT_DIR,params.MIN_HAM_DIST))
 else:
     plt.show()
