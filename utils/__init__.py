@@ -13,6 +13,11 @@ def parse_UniProtKB_header(fastaHeader):
     geneName = fastaHeader[fastaHeader.find('GN=')+3:fastaHeader.find(' ')]
     return uniqueIdentifier, entryName, proteinName, organismName, geneName
 
+def parse_NCBIRefSeq_header(fastaHeader):
+    organismName = fastaHeader[fastaHeader.rfind('[')+1:fastaHeader.rfind(']')]
+    geneName = fastaHeader[fastaHeader.find(' ')+1:fastaHeader.rfind('[')]
+    return organismName, geneName
+
 dissimilarity_mapping = {} # dissimilarity_mapping((protNameA,protNameB)) = TRUE/FALSE
 
 def proteins_are_dissimilar(protNameA, protNameB, protA, protB):
