@@ -5,3 +5,4 @@ build/
 dist/
 *.egg-info/*
 ner/gmb-2.2.0
+data/UniProt full Proteomes
