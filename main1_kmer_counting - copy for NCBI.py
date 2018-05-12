@@ -20,14 +20,14 @@ protein_seq = dict() # protein_seq[GENE_NAME] = AMINO_ACID_SEQUENCE
 
 #PROTEOME_FILE = 'data/NCBI-RefSeq Bos taurus (13192 proteins).fasta'
 #OUTPUT_DIR = 'NCBI/Bos taurus' # Done
-#PROTEOME_FILE = 'data/NCBI-RefSeq Canis lupus familiaris (58484 proteins).fasta'
-#OUTPUT_DIR = 'NCBI/Canis lupus'
+PROTEOME_FILE = 'data/NCBI-RefSeq Canis lupus familiaris (58484 proteins).fasta'
+OUTPUT_DIR = 'NCBI/Canis lupus'
 #PROTEOME_FILE = 'data/NCBI-RefSeq Danio rerio (52743 proteins).fasta'
 #OUTPUT_DIR = 'NCBI/Danio rerio'
 #PROTEOME_FILE = 'data/NCBI-RefSeq Gallus gallus (6396 proteins).fasta'
 #OUTPUT_DIR = 'NCBI/Gallus gallus' # Done
-PROTEOME_FILE = 'data/NCBI-RefSeq Mus musculus (33367 proteins).fasta'
-OUTPUT_DIR = 'NCBI/Mus musculus'
+#PROTEOME_FILE = 'data/NCBI-RefSeq Mus musculus (33367 proteins).fasta'
+#OUTPUT_DIR = 'NCBI/Mus musculus' # Done
 #PROTEOME_FILE = 'data/NCBI-RefSeq Pan troglodytes (80607 proteins).fasta'
 #OUTPUT_DIR = 'NCBI/Pan troglodytes'
 #PROTEOME_FILE = 'data/NCBI-RefSeq Rattus Norvegicus (17438 proteins).fasta'

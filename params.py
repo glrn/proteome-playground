@@ -1,11 +1,13 @@
 #Organism name
 #ORGANISM = 'Homo Sapiens'
 #ORGANISM = 'Mus Musculus'
-ORGANISM = 'Drosophila Melanogaster'
+#ORGANISM = 'Drosophila Melanogaster'
 #ORGANISM = 'Danio Rerio'
 #ORGANISM = 'Caenorhabditis Elegans'
+#ORGANISM = 'Rattus Norvegicus'
+ORGANISM = 'Bos Taurus'
 
-OUTPUT_DIR = ORGANISM
+OUTPUT_DIR = 'outputs/' + ORGANISM
 
 # For kmer counting
 PROTEOME_FILE = 'data/Uniprot-Swiss-prot ({}) without fragments.fasta'.format(ORGANISM)
