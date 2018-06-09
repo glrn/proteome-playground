@@ -1,0 +1,30 @@
+Scientific,Classification,UniProt Organism ID,Expected # Proteins
+Caenorhabditis Elegans (worm),Nematode,6239,26813
+Saccharomyces Cerevisiae (yeast),Fungi,559292,6049
+Candida Glabrata (haploid yeast),Fungi,284593,5200
+Biomphalaria Glabrata (mollusca),Mollusk,6526,31021
+Ciona Intestinalis (sea squirt),Tunicate,7719,17309
+Arabidopsis Thaliana (arabidopsis),Plant,3702,39367
+Oryza Sativa (rice),Plant,39947,48932
+Vitis Vinifera (grape),Plant,29760,29907
+Drosophila Melanogaster (fly),Insect,7227,21957
+Anopheles Gambiae (mosquito),Insect,7165,13515
+Apis Mellifera (bee),Insect,7460,15323
+Tribolium Castaneum (beetle),Insect,7070,18505
+Danio Rerio (zebrafish),Bony Fish,7955,44131
+Takifugu Rubripes (fugu),Bony Fish,31033,47858
+Tetraodon Nigroviridis (pufferfish),Bony Fish,99883,23074
+Gasterosteus Aculeatus (stickleback),Bony Fish,69293,27249
+Oryzias Latipes (Japanese Medaka),Bony Fish,8090,24637
+Anolis Carolinensis (lizard),Reptile,28377,19108
+Xenopus Tropicalis (frog),Amphibian,8364,29631
+Gallus Gallus (chicken),Bird,9031,29478
+Ornithorhynchus Anatinus (platypus),Mammal,9258,23552
+Bos Taurus (cow),Mammal,9913,23966
+Canis Familiaris (dog),Mammal,9615,25491
+Rattus Norvegicus (rat),Mammal,10116,29966
+Macaca Mulatta (rhesus monkey),Mammal,9544,45199
+Monodelphis Domestica (opossum),Mammal,13616,22243
+Mus Musculus (mouse),Mammal,10090,53102
+Pan Troglodytes (chimpanzee),Mammal,9598,48771
+Homo Sapiens (human),Mammal,9606,71599

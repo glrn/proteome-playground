@@ -1,0 +1,23 @@
+Loading input file top100_lcs_uniprot_genes.txt...
+Loaded 104 genes from file
+A total of 20370 diseases found in DisGeNET
+A total of 5774 diseases with at least 10 associated genes (with score > 0.00)
+Loaded a list of 104 genes
+diseaseId = C1963946:   the disease group contains 10 genes, 2 of them are genes from the input list (0.20)     [Disease: Laryngeal dystonia]
+diseaseId = C2931919:   the disease group contains 13 genes, 2 of them are genes from the input list (0.15)     [Disease: X-linked infantile spasm syndrome]
+diseaseId = C1527344:   the disease group contains 12 genes, 2 of them are genes from the input list (0.17)     [Disease: Dysphonia]
+diseaseId = C1836509:   the disease group contains 11 genes, 2 of them are genes from the input list (0.18)     [Disease: Hypotonic seizures]
+diseaseId = C1848411:   the disease group contains 16 genes, 2 of them are genes from the input list (0.12)     [Disease: XERODERMA PIGMENTOSUM, COMPLEMENTATION GROUP E]
+diseaseId = C0270846:   the disease group contains 11 genes, 2 of them are genes from the input list (0.18)     [Disease: Epileptic drop attack]
+diseaseId = C0018991:   the disease group contains 18 genes, 2 of them are genes from the input list (0.11)     [Disease: Hemiplegia]
+diseaseId = C1370419:   the disease group contains 14 genes, 3 of them are genes from the input list (0.21)     [Disease: Granulosa cell tumor of the ovary]
+diseaseId = C0278828:   the disease group contains 18 genes, 2 of them are genes from the input list (0.11)     [Disease: Stage IV Bladder Cancer AJCC v6]
+diseaseId = C0751122:   the disease group contains 25 genes, 4 of them are genes from the input list (0.16)     [Disease: Infantile Severe Myoclonic Epilepsy]
+diseaseId = C0431380:   the disease group contains 53 genes, 6 of them are genes from the input list (0.11)     [Disease: Cortical Dysplasia]
+diseaseId = C2720434:   the disease group contains 14 genes, 2 of them are genes from the input list (0.14)     [Disease: Macroencephaly]
+diseaseId = C3887898:   the disease group contains 37 genes, 5 of them are genes from the input list (0.14)     [Disease: Infantile Spasm]
+diseaseId = C1833662:   the disease group contains 15 genes, 2 of them are genes from the input list (0.13)     [Disease: INCLUSION BODY MYOPATHY WITH EARLY-ONSET PAGET DISEASE AND FRONTOTEMPORAL DEMENTIA]
+diseaseId = C0266449:   the disease group contains 40 genes, 5 of them are genes from the input list (0.12)     [Disease: Congenital anomaly of brain]
+diseaseId = C1955869:   the disease group contains 50 genes, 9 of them are genes from the input list (0.18)     [Disease: Malformations of Cortical Development]
+diseaseId = C0016045:   the disease group contains 21 genes, 3 of them are genes from the input list (0.14)     [Disease: fibroma]
+diseaseId = C1997740:   the disease group contains 11 genes, 2 of them are genes from the input list (0.18)     [Disease: Segmental dystonia]

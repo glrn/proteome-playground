@@ -6,5 +6,8 @@ dist/
 *.egg-info/*
 ner/gmb-2.2.0
 data/UniProt full Proteomes
-data/UniProt Proteomes/Eukaryotes/*.fasta
-data/UniProt Proteomes/Bacteria/*.fasta
+data/UniProt Proteomes/Eukaryotes
+data/UniProt Proteomes/Bacteria
+data/DisGeNET
+DisGeNet script to Benny/disease_enrichment_script.zip
+DisGeNet script to Benny/DisGeNET_all_gene_disease_associations.tsv
