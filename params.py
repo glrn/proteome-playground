@@ -1,11 +1,11 @@
 #Organism name
-#ORGANISM = 'Homo Sapiens'
+ORGANISM = 'Homo Sapiens'
 #ORGANISM = 'Mus Musculus'
 #ORGANISM = 'Drosophila Melanogaster'
 #ORGANISM = 'Danio Rerio'
 #ORGANISM = 'Caenorhabditis Elegans'
 #ORGANISM = 'Rattus Norvegicus'
-ORGANISM = 'Bos Taurus'
+#ORGANISM = 'Bos Taurus'
 
 OUTPUT_DIR = 'outputs/' + ORGANISM
 
@@ -18,7 +18,7 @@ MIN_REPETITIONS_IN_PROTEIN = 2
 MIN_DIST_BETWEEN_REPETITIONS = K # this means non-overlapping
 
 # For graph drawing
-SHOULD_SAVEFIG = True
+SHOULD_SAVEFIG = False # True
 MIN_HAM_DIST = 3
 
 if ORGANISM == 'Homo Sapiens':

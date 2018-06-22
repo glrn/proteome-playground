@@ -3,7 +3,7 @@ import sys
 
 ### Parameters ###
 MIN_ASSOCIATION_SCORE = 0.0
-MIN_GENES_FOR_DISEASE = 10
+MIN_GENES_FOR_DISEASE = 1
 MIN_ENRICHMENT_SCORE = 0.10
 ##################
 

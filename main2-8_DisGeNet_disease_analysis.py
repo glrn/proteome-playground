@@ -20,7 +20,8 @@ print "A total of %d diseases found in DisGeNET" % len(disease_id_mapping)
 
 disease_gene_mapping = dict() # a set of genes for each disease id
 MIN_ASSOCIATION_SCORE = 0.0
-MIN_GENES_FOR_DISEASE = 10
+#MIN_GENES_FOR_DISEASE = 10
+MIN_GENES_FOR_DISEASE = 1
 
 with open(DisGeNET_file) as csvfile:
     reader = csv.DictReader(csvfile, delimiter = '\t')

@@ -45,7 +45,7 @@ for c in nx.connected_components(G):
 import matplotlib.pyplot as plt
 color_values = [90 - gene_count_dict[kmer] for kmer in G.nodes()]
 plt.figure(figsize=(20, 15))
-nx.draw(G, with_labels=True, node_color=color_values, vmin=5, vmax=86,cmap=plt.cm.Reds_r)
+nx.draw(G, with_labels=True, node_color=color_values, vmin=3, vmax=86,cmap=plt.cm.Reds_r)
 
 if params.SHOULD_SAVEFIG:
     plt.savefig('outputs/{}/graph - edges for hamming distance {}.png'.format(
