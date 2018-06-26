@@ -7,8 +7,8 @@ dstDir = '../data/Uniprot Proteomes/Eukaryotes/'
 
 for filename in os.listdir(dstDir):
     if filename.endswith(".csv"): 
-        if 'with dilution' in filename:
-        #if 'without dilution' in filename:
+        #if 'with dilution' in filename:
+        if 'without dilution' in filename:
             #print filename
             organismName = filename[:filename.find('(')-1]
             colloquialName = filename[filename.find('(')+1:filename.find(')')]
