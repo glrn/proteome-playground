@@ -46,7 +46,27 @@ for org in organisms:
     organisms_vectors[org] = [1 if peptide in organisms[org] else 0 for peptide in all_peptides]
 
 
-organisms_order = organisms.keys()
+organisms_order =  ['human',
+                    'chimpanzee',
+                    'mouse',
+                    'rat',
+                    'cow',
+                    'dog',
+                    'platypus',
+                    'chicken',
+                    'lizard',                  
+                    'fugu',
+                    'pufferfish',
+                    'beetle',
+                    'Japanese Medaka',
+                    'frog',
+                    'bee',
+                    'mosquito',
+                    'fly',
+                    'worm',
+                    'mollusca',
+                    'yeast',
+                    'haploid yeast']
  
 dist_matrix = [[distance.hamming(organisms_vectors[org1],organisms_vectors[org2])*len(all_peptides) for org1 in organisms_order ] for org2 in organisms_order]
 #dist_matrix = [[distance.hamming(organisms_vectors[org1],organisms_vectors[org2]) for org1 in organisms_order ] for org2 in organisms_order]
