@@ -1,3 +1,7 @@
+from collections import Counter
+
+def isAlmostSAAR(peptide):
+    return Counter(peptide).most_common(1)[0][1] >= 8
 
 list_of_species =  [#'Arabidopsis Thaliana (arabidopsis)',
                     #'Oryza Sativa (rice)',
@@ -28,6 +32,7 @@ list_of_species =  [#'Arabidopsis Thaliana (arabidopsis)',
                     'Mus Musculus (mouse)',
                     'Pan Troglodytes (chimpanzee)',
                     'Homo Sapiens (human)']
+
 
 data_path = '../data/Uniprot Proteomes/Eukaryotes/'                    
                
@@ -156,15 +161,29 @@ for organism in list_of_species:
                 break
                 
     peptides[organism] = (peptidesWithoutDilution, peptidesWithDilution, peptidesWithDilutionWithoutSAARs)
+
+amino_acids = 'ILVFMCAGPTSYWQNHEDKR'
     
 for org in list_of_species:
-    print org
+    #print
+    #print org
     nonDiluted =            [p[0] for p in peptides[org][0]]
     diluted =               [p[0] for p in peptides[org][1]]
     dilutedWithoutSAARs =   [p[0] for p in peptides[org][2]]
-    #print nonDiluted
-    #print diluted
-    #print set(diluted).intersection(set(nonDiluted))
-    print len(set(diluted).intersection(set(nonDiluted)))
-    print len(set(diluted).intersection(set(dilutedWithoutSAARs)))
-    print
+    
+    #print 'There are %d SAARs/almost SAARs in the non diluted 40 set' % \
+    #    len([p for p in nonDiluted if isAlmostSAAR(p)])
+    #print 'There are %d peptides in the intersection between the diluted and non diluted' % \
+    #    len(set(nonDiluted).intersection(set(diluted)))
+    #print set(nonDiluted).intersection(set(diluted))
+    
+    """
+    print org + '\t',
+    for aa in amino_acids:
+        if aa*10 in diluted: # note: remember to delete the 40 threshold
+            print '&\cellcolor{filledCell} ',
+        else:
+            print '& ',
+    print r'\\\hline'
+    """
+    
