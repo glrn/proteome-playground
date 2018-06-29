@@ -20,8 +20,8 @@ print "A total of %d diseases found in DisGeNET" % len(disease_id_mapping)
 
 disease_gene_mapping = dict() # a set of genes for each disease id
 MIN_ASSOCIATION_SCORE = 0.0
-#MIN_GENES_FOR_DISEASE = 10
-MIN_GENES_FOR_DISEASE = 1
+MIN_GENES_FOR_DISEASE = 10
+#MIN_GENES_FOR_DISEASE = 1
 
 with open(DisGeNET_file) as csvfile:
     reader = csv.DictReader(csvfile, delimiter = '\t')
@@ -37,6 +37,28 @@ print "A total of %d diseases with at least %d associated genes (with score > %.
       (len([disease for disease in disease_gene_mapping if len(disease_gene_mapping[disease]) >= MIN_GENES_FOR_DISEASE]),
        MIN_GENES_FOR_DISEASE,
        MIN_ASSOCIATION_SCORE)
+
+########### new
+"""
+for i in xrange(50):
+    print "================================"
+    human_genes = [g.strip() for g in open('data/Homo Sapiens - all genes.txt','r').readlines()]
+    import random
+    genes_containing_freq_kmers = random.sample(set(human_genes), 50)
+    print genes_containing_freq_kmers
+
+    for diseaseId in disease_gene_mapping:
+        if len(disease_gene_mapping[diseaseId]) >= MIN_GENES_FOR_DISEASE:
+            disease_related_genes = disease_gene_mapping[diseaseId].intersection(genes_containing_freq_kmers)
+            if len(disease_related_genes) / float(len(disease_gene_mapping[diseaseId])) > 0.20:
+                print "diseaseId = %s:\t%d genes,\t%d of them contain a frequent kmer (%.2f)\t[%s]" % \
+                      (diseaseId,
+                       len(disease_gene_mapping[diseaseId]),
+                       len(disease_related_genes),
+                       len(disease_related_genes) / float(len(disease_gene_mapping[diseaseId])),
+                       disease_id_mapping[diseaseId])
+"""
+########### new end
 
 
 most_frequent_kmers =  ['AAAAAAAAAA','EEEEEEEEEE','QQQQQQQQQQ','PPPPPPPPPP',
@@ -128,3 +150,5 @@ for freqkmer in most_frequent_kmers:
                        len(disease_related_genes),
                        len(disease_related_genes) / float(len(disease_gene_mapping[diseaseId])),
                        disease_id_mapping[diseaseId])
+                #print disease_gene_mapping[diseaseId]
+                #print disease_related_genes
