@@ -49,9 +49,8 @@ for org in organisms:
     organisms_vectors[org] = [1 if peptide in organisms[org] else 0 for peptide in all_peptides]
 
 
-organisms_order =  [#'Arabidopsis Thaliana (arabidopsis)',
-                    #'Oryza Sativa (rice)',
-                    #'Vitis Vinifera (grape)',
+organisms_order =  ['Arabidopsis Thaliana (arabidopsis)',
+                    'Oryza Sativa (rice)',
                     'Saccharomyces Cerevisiae (yeast)',
                     'Candida Glabrata (haploid yeast)',
                     'Caenorhabditis Elegans (worm)',
@@ -73,16 +72,15 @@ organisms_order =  [#'Arabidopsis Thaliana (arabidopsis)',
                     'Bos Taurus (cow)',
                     'Canis Familiaris (dog)',
                     'Rattus Norvegicus (rat)',
-                    #'Macaca Mulatta (rhesus monkey)',
+                    'Macaca Mulatta (rhesus monkey)',
                     'Monodelphis Domestica (opossum)',
                     'Mus Musculus (mouse)',
                     'Pan Troglodytes (chimpanzee)',
                     'Homo Sapiens (human)']
 organisms_order = list(reversed(organisms_order))
                     
-colloquial_organisms_order =   [#'Arabidopsis Thaliana (arabidopsis)',
-                                #'Oryza Sativa (rice)',
-                                #'Vitis Vinifera (grape)',
+colloquial_organisms_order =   ['Arabidopsis',
+                                'Rice',
                                 'S. Cerevisiae',
                                 'Candida',
                                 'Worm',
@@ -104,9 +102,9 @@ colloquial_organisms_order =   [#'Arabidopsis Thaliana (arabidopsis)',
                                 'Cow',
                                 'Dog',
                                 'Rat',
-                                #'Macaca Mulatta (rhesus monkey)',
                                 'Opossum',
                                 'Mouse',
+                                'Rhesus Macaque',
                                 'Chimpanzee',
                                 'Human']
 colloquial_organisms_order = list(reversed(colloquial_organisms_order))
@@ -125,13 +123,15 @@ mask[np.triu_indices_from(mask)] = True
 with sns.axes_style("white"):
     fig, ax = plt.subplots(figsize=(15,15))
     ax = sns.heatmap(uniform_data, xticklabels = colloquial_organisms_order, yticklabels = colloquial_organisms_order, cmap="Reds_r", mask=mask, square = True)
-    ax.set_yticklabels(ax.get_yticklabels(), rotation = 0, fontsize = 18)
-    ax.set_xticklabels(ax.get_xticklabels(), rotation = 90, fontsize = 18)
-    #ax.figure.tight_layout()
+    ax.set_yticklabels(ax.get_yticklabels(), rotation = 0, fontsize = 16)
+    ax.set_xticklabels(ax.get_xticklabels(), rotation = 90, fontsize = 16)
+    ax.figure.tight_layout()
+    ax.figure.subplots_adjust(bottom = 0.25)
     plt.show()
     #plt.savefig('outputs/{}/graph - edges for hamming distance {}.png')
     
-sns.set(font_scale=2)
+
+sns.set(font_scale=1.8)
 uniform_data = np.array(dist_matrix)
 mask = np.zeros_like(uniform_data)
 mask[np.triu_indices_from(mask)] = True
@@ -142,4 +142,6 @@ with sns.axes_style("white"):
     #ax.set_yticklabels(ax.get_yticklabels(), rotation = 0, fontsize = 18)
     #ax.set_xticklabels(ax.get_xticklabels(), rotation = 90, fontsize = 18)
     #ax.figure.tight_layout()
+    #ax.figure.subplots_adjust(bottom = 0.22, right = 0.68)
     plt.show()
+
