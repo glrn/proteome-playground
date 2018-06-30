@@ -31,7 +31,7 @@ for filename in os.listdir(dstDir):
                     if 'X' not in peptide:
                         peptides.append(peptide)
                         i += 1
-                    if i > 40:
+                    if i > 10: # if i > 40:
                         break
             organisms[organismName + ' (' + colloquialName + ')'] = peptides
             #print colloquialName
@@ -123,18 +123,22 @@ uniform_data = np.array(dist_matrix)
 mask = np.zeros_like(uniform_data)
 mask[np.triu_indices_from(mask)] = True
 with sns.axes_style("white"):
+    fig, ax = plt.subplots(figsize=(15,15))
     ax = sns.heatmap(uniform_data, xticklabels = colloquial_organisms_order, yticklabels = colloquial_organisms_order, cmap="Reds_r", mask=mask, square = True)
     ax.set_yticklabels(ax.get_yticklabels(), rotation = 0, fontsize = 18)
     ax.set_xticklabels(ax.get_xticklabels(), rotation = 90, fontsize = 18)
-    ax.figure.tight_layout()
+    #ax.figure.tight_layout()
     plt.show()
+    #plt.savefig('outputs/{}/graph - edges for hamming distance {}.png')
     
-
+sns.set(font_scale=2)
 uniform_data = np.array(dist_matrix)
 mask = np.zeros_like(uniform_data)
 mask[np.triu_indices_from(mask)] = True
 with sns.axes_style("white"):
-    ax = sns.clustermap(uniform_data, xticklabels = colloquial_organisms_order, yticklabels = colloquial_organisms_order, cmap="Reds_r", square = True)
+    ax = sns.clustermap(uniform_data, xticklabels = colloquial_organisms_order, yticklabels = colloquial_organisms_order, cmap="Reds_r", figsize = (15,15))
+    plt.setp(ax.ax_heatmap.yaxis.get_majorticklabels(), rotation=0)
+    plt.setp(ax.ax_heatmap.xaxis.get_majorticklabels(), rotation=90)
     #ax.set_yticklabels(ax.get_yticklabels(), rotation = 0, fontsize = 18)
     #ax.set_xticklabels(ax.get_xticklabels(), rotation = 90, fontsize = 18)
     #ax.figure.tight_layout()

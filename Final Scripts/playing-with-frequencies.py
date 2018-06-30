@@ -3,9 +3,8 @@ from collections import Counter
 def isAlmostSAAR(peptide):
     return Counter(peptide).most_common(1)[0][1] >= 8
 
-list_of_species =  [#'Arabidopsis Thaliana (arabidopsis)',
-                    #'Oryza Sativa (rice)',
-                    #'Vitis Vinifera (grape)',
+list_of_species =  ['Arabidopsis Thaliana (arabidopsis)',
+                    'Oryza Sativa (rice)',
                     'Saccharomyces Cerevisiae (yeast)',
                     'Candida Glabrata (haploid yeast)',
                     'Caenorhabditis Elegans (worm)',
@@ -27,7 +26,7 @@ list_of_species =  [#'Arabidopsis Thaliana (arabidopsis)',
                     'Bos Taurus (cow)',
                     'Canis Familiaris (dog)',
                     'Rattus Norvegicus (rat)',
-                    #'Macaca Mulatta (rhesus monkey)',
+                    'Macaca Mulatta (rhesus monkey)',
                     'Monodelphis Domestica (opossum)',
                     'Mus Musculus (mouse)',
                     'Pan Troglodytes (chimpanzee)',
@@ -37,9 +36,8 @@ list_of_species =  [#'Arabidopsis Thaliana (arabidopsis)',
 data_path = '../data/Uniprot Proteomes/Eukaryotes/'                    
                
 files_without_dilution = {}               
-#files_without_dilution['Arabidopsis Thaliana (arabidopsis)']     = 
-#files_without_dilution['Oryza Sativa (rice)']                    = 
-#files_without_dilution['Vitis Vinifera (grape)']                 = 
+files_without_dilution['Arabidopsis Thaliana (arabidopsis)']     = data_path + 'Arabidopsis Thaliana (arabidopsis) - reviewed - frequent k10-mers - without dilution - 2018-06-30-105130.csv'
+files_without_dilution['Oryza Sativa (rice)']                    = data_path + 'Oryza Sativa (rice) - reviewed - frequent k10-mers - without dilution - 2018-06-30-105009.csv'
 files_without_dilution['Saccharomyces Cerevisiae (yeast)']       = data_path + 'Saccharomyces Cerevisiae (yeast) - frequent k10-mers - without dilution - 2018-05-06-212054.csv'
 files_without_dilution['Candida Glabrata (haploid yeast)']       = data_path + 'Candida Glabrata (haploid yeast) - frequent k10-mers - without dilution - 2018-05-06-212050.csv'
 files_without_dilution['Caenorhabditis Elegans (worm)']          = data_path + 'Caenorhabditis Elegans (worm) - frequent k10-mers - without dilution - 2018-05-06-212302.csv'
@@ -61,16 +59,15 @@ files_without_dilution['Ornithorhynchus Anatinus (platypus)']    = data_path + '
 files_without_dilution['Bos Taurus (cow)']                       = data_path + 'Bos Taurus (cow) - frequent k10-mers - without dilution - 2018-05-06-212344.csv'
 files_without_dilution['Canis Familiaris (dog)']                 = data_path + 'Canis Familiaris (dog) - frequent k10-mers - without dilution - 2018-05-06-212342.csv'
 files_without_dilution['Rattus Norvegicus (rat)']                = data_path + 'Rattus Norvegicus (rat) - frequent k10-mers - without dilution - 2018-05-06-212322.csv'
-#files_without_dilution['Macaca Mulatta (rhesus monkey)']         = 
+files_without_dilution['Macaca Mulatta (rhesus monkey)']         = data_path + 'Macaca Mulatta (rhesus monkey) - frequent k10-mers - without dilution - 2018-05-06-212434.csv'
 files_without_dilution['Monodelphis Domestica (opossum)']        = data_path + 'Monodelphis Domestica (opossum) - frequent k10-mers - without dilution - 2018-05-06-212337.csv'
 files_without_dilution['Mus Musculus (mouse)']                   = data_path + 'Mus Musculus (mouse) - frequent k10-mers - without dilution - 2018-05-06-212349.csv'
 files_without_dilution['Pan Troglodytes (chimpanzee)']           = data_path + 'Pan Troglodytes (chimpanzee) - frequent k10-mers - without dilution - 2018-05-06-212353.csv'
 files_without_dilution['Homo Sapiens (human)']                   = data_path + 'Homo Sapiens (human) - frequent k10-mers - without dilution - 2018-05-06-212428.csv'
 
 files_with_dilution = {}
-#files_with_dilution['Arabidopsis Thaliana (arabidopsis)']        = 
-#files_with_dilution['Oryza Sativa (rice)']                       = 
-#files_with_dilution['Vitis Vinifera (grape)']                    = 
+files_with_dilution['Arabidopsis Thaliana (arabidopsis)']        = data_path + 'Arabidopsis Thaliana (arabidopsis) - reviewed - frequent k10-mers - with dilution - 2018-06-30-112233.csv'
+files_with_dilution['Oryza Sativa (rice)']                       = data_path + 'Oryza Sativa (rice) - reviewed - frequent k10-mers - with dilution - 2018-06-30-105458.csv'
 files_with_dilution['Saccharomyces Cerevisiae (yeast)']          = data_path + 'Saccharomyces Cerevisiae (yeast) - frequent k10-mers - with dilution - 2018-05-06-232625.csv'
 files_with_dilution['Candida Glabrata (haploid yeast)']          = data_path + 'Candida Glabrata (haploid yeast) - frequent k10-mers - with dilution - 2018-05-06-212707.csv'
 files_with_dilution['Caenorhabditis Elegans (worm)']             = data_path + 'Caenorhabditis Elegans (worm) - frequent k10-mers - with dilution - 2018-05-06-214145.csv'
@@ -92,7 +89,7 @@ files_with_dilution['Ornithorhynchus Anatinus (platypus)']       = data_path + '
 files_with_dilution['Bos Taurus (cow)']                          = data_path + 'Bos Taurus (cow) - frequent k10-mers - with dilution - 2018-05-07-003323.csv'
 files_with_dilution['Canis Familiaris (dog)']                    = data_path + 'Canis Familiaris (dog) - frequent k10-mers - with dilution - 2018-05-07-003054.csv'
 files_with_dilution['Rattus Norvegicus (rat)']                   = data_path + 'Rattus Norvegicus (rat) - frequent k10-mers - with dilution - 2018-05-07-050120.csv'
-#files_with_dilution['Macaca Mulatta (rhesus monkey)']            = 
+files_with_dilution['Macaca Mulatta (rhesus monkey)']            = data_path + 'Macaca Mulatta (rhesus monkey) - frequent k10-mers - with dilution - 2018-06-30-042557.csv'
 files_with_dilution['Monodelphis Domestica (opossum)']           = data_path + 'Monodelphis Domestica (opossum) - frequent k10-mers - with dilution - 2018-06-29-055832.csv'
 files_with_dilution['Mus Musculus (mouse)']                      = data_path + 'Mus Musculus (mouse) - frequent k10-mers - with dilution - 2018-05-07-080946.csv'
 files_with_dilution['Pan Troglodytes (chimpanzee)']              = data_path + 'Pan Troglodytes (chimpanzee) - frequent k10-mers - with dilution - 2018-05-07-234939.csv'
@@ -176,6 +173,9 @@ for org in list_of_species:
     #print 'There are %d peptides in the intersection between the diluted and non diluted' % \
     #    len(set(nonDiluted).intersection(set(diluted)))
     #print set(nonDiluted).intersection(set(diluted))
+    print org,
+    print len([p for p in nonDiluted if isAlmostSAAR(p)]),
+    print len([p for p in diluted if isAlmostSAAR(p)])
     
     """
     print org + '\t',
@@ -186,4 +186,5 @@ for org in list_of_species:
             print '& ',
     print r'\\\hline'
     """
+    
     
