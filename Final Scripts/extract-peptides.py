@@ -8,8 +8,8 @@ dstDir = '../data/Uniprot Proteomes/Eukaryotes/'
 
 for filename in os.listdir(dstDir):
     if filename.endswith(".csv"): 
-        if 'with dilution' in filename:
-        #if 'without dilution' in filename:
+        #if 'with dilution' in filename:
+        if 'without dilution' in filename:
             #print filename
             organismName = filename[:filename.find('(')-1]
             colloquialName = filename[filename.find('(')+1:filename.find(')')]
@@ -31,7 +31,7 @@ for filename in os.listdir(dstDir):
                     if 'X' not in peptide:
                         peptides.append(peptide)
                         i += 1
-                    if i > 10: # if i > 40:
+                    if i > 40: # if i > 40:
                         break
             organisms[organismName + ' (' + colloquialName + ')'] = peptides
             #print colloquialName
