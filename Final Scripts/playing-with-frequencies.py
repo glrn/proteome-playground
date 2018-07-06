@@ -160,7 +160,11 @@ for organism in list_of_species:
     peptides[organism] = (peptidesWithoutDilution, peptidesWithDilution, peptidesWithDilutionWithoutSAARs)
 
 amino_acids = 'ILVFMCAGPTSYWQNHEDKR'
-    
+
+all_nonDiluted          = set()
+all_diluted             = set()
+all_dilutedWithoutSAARs = set()
+
 for org in list_of_species:
     #print
     #print org
@@ -177,6 +181,10 @@ for org in list_of_species:
     print len([p for p in nonDiluted if isAlmostSAAR(p)]),
     print len([p for p in diluted if isAlmostSAAR(p)])
     
+    all_nonDiluted.update(nonDiluted)
+    all_diluted.update(diluted)
+    all_dilutedWithoutSAARs.update(dilutedWithoutSAARs)
+    
     """
     print org + '\t',
     for aa in amino_acids:
@@ -187,4 +195,9 @@ for org in list_of_species:
     print r'\\\hline'
     """
     
-    
+print all_nonDiluted         
+print all_diluted            
+print all_dilutedWithoutSAARs
+print len(all_nonDiluted)     
+print len(all_diluted)     
+print len(all_dilutedWithoutSAARs)

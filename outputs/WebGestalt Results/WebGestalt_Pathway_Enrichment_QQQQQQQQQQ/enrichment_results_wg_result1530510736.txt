@@ -1,0 +1,11 @@
+geneset	description	link	C	O	E	R	PValue	FDR	overlapGene	OverlapGene_UserID
+hsa04330	Notch signaling pathway - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa04330	48	5	0.158188852271099	31.6077898550725	3.8117967837703e-07	0.00011549744254824	1387;55534;84441;9253;9612	CREBBP;MAML3;MAML2;NUMBL;NCOR2
+hsa04919	Thyroid hormone signaling pathway - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa04919	118	3	0.388880928499785	7.7144436256448	0.00652007517026343	0.987791388294909	1387;8202;9968	CREBBP;NCOA3;MED12
+hsa05016	Huntington's disease - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa05016	193	3	0.636051010173377	4.71660283847713	0.0245426734578154	1	1387;3064;6908	CREBBP;HTT;TBP
+hsa05169	Epstein-Barr virus infection - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa05169	204	3	0.672302622152171	4.46227621483376	0.0283340097468268	1	1387;6908;9612	CREBBP;TBP;NCOR2
+hsa05215	Prostate cancer - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa05215	89	2	0.293308496919329	6.81875915974597	0.0342031279656902	1	1387;367	CREBBP;AR
+hsa04658	Th1 and Th2 cell differentiation - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa04658	92	2	0.303195300186273	6.59640831758034	0.0363446624437054	1	55534;84441	MAML3;MAML2
+hsa00604	Glycosphingolipid biosynthesis - ganglio series - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa00604	15	1	0.0494340163347184	20.2289855072464	0.0483571469907661	1	81849	ST6GALNAC5
+hsa05168	Herpes simplex infection - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa05168	185	2	0.609686201461527	3.28037602820212	0.123090648700318	1	1387;6908	CREBBP;TBP
+hsa05033	Nicotine addiction - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa05033	40	1	0.131824043559249	7.58586956521739	0.124020588662137	1	773	CACNA1A
+hsa03022	Basal transcription factors - Homo sapiens (human)	http://www.kegg.jp/kegg-bin/show_pathway?hsa03022	45	1	0.148302049004155	6.74299516908212	0.13844639886767	1	6908	TBP

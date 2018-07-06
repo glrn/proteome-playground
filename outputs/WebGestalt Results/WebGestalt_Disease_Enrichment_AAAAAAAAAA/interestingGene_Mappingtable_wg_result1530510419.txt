@@ -1,0 +1,87 @@
+userid	genesymbol	genename	entrezgene
+OLIG2	OLIG2	oligodendrocyte transcription factor 2	10215
+GDF11	GDF11	growth differentiation factor 11	10220
+CHD3	CHD3	chromodomain helicase DNA binding protein 3	1107
+CLASRP	CLASRP	CLK4 associating serine/arginine rich protein	11129
+SOX21	SOX21	SRY-box 21	11166
+NIPA1	NIPA1	non imprinted in Prader-Willi/Angelman syndrome 1	123606
+ZNF358	ZNF358	zinc finger protein 358	140467
+FBXO41	FBXO41	F-box protein 41	150726
+NKX2-3	NKX2-3	NK2 homeobox 3	159296
+OTUD7A	OTUD7A	OTU deubiquitinase 7A	161725
+ARX	ARX	aristaless related homeobox	170302
+GSX2	GSX2	GS homeobox 2	170825
+EGR2	EGR2	early growth response 2	1959
+ELN	ELN	elastin	2006
+EN1	EN1	engrailed homeobox 1	2019
+RBM24	RBM24	RNA binding motif protein 24	221662
+SP8	SP8	Sp8 transcription factor	221833
+KDM1A	KDM1A	lysine demethylase 1A	23028
+PHLPP1	PHLPP1	PH domain and leucine rich repeat protein phosphatase 1	23239
+LCORL	LCORL	ligand dependent nuclear receptor corepressor like	254251
+TMEM158	TMEM158	transmembrane protein 158 (gene/pseudogene)	25907
+GATA6	GATA6	GATA binding protein 6	2627
+FOXD3	FOXD3	forkhead box D3	27022
+MNX1	MNX1	motor neuron and pancreas homeobox 1	3110
+HOXA13	HOXA13	homeobox A13	3209
+HOXD11	HOXD11	homeobox D11	3237
+ID4	ID4	inhibitor of DNA binding 4, HLH protein	3400
+HMX3	HMX3	H6 family homeobox 3	340784
+EVX2	EVX2	even-skipped homeobox 2	344191
+JUND	JUND	JunD proto-oncogene, AP-1 transcription factor subunit	3727
+LHFPL3	LHFPL3	lipoma HMGIC fusion partner-like 3	375612
+SKIDA1	SKIDA1	SKI/DACH domain containing 1	387640
+KMT5A	KMT5A	lysine methyltransferase 5A	387893
+SP5	SP5	Sp5 transcription factor	389058
+SKOR1	SKOR1	SKI family transcriptional corepressor 1	390598
+MAZ	MAZ	MYC associated zinc finger protein	4150
+MAP3K4	MAP3K4	mitogen-activated protein kinase kinase kinase 4	4216
+ASCL1	ASCL1	achaete-scute family bHLH transcription factor 1	429
+FOXB2	FOXB2	forkhead box B2	442425
+MSH3	MSH3	mutS homolog 3	4437
+NKX6-1	NKX6-1	NK6 homeobox 1	4825
+ZFR	ZFR	zinc finger RNA binding protein	51663
+NLK	NLK	nemo like kinase	51701
+RBM47	RBM47	RNA binding motif protein 47	54502
+POU3F1	POU3F1	POU class 3 homeobox 1	5453
+POU4F1	POU4F1	POU class 4 homeobox 1	5457
+FEV	FEV	FEV, ETS transcription factor	54738
+ALKBH5	ALKBH5	alkB homolog 5, RNA demethylase	54890
+KLHL11	KLHL11	kelch like family member 11	55175
+ASXL2	ASXL2	additional sex combs like 2, transcriptional regulator	55252
+BTBD2	BTBD2	BTB domain containing 2	55643
+PRPF40A	PRPF40A	pre-mRNA processing factor 40 homolog A	55660
+PRKD1	PRKD1	protein kinase D1	5587
+CCDC177	CCDC177	coiled-coil domain containing 177	56936
+PRDM8	PRDM8	PR/SET domain 8	56978
+ARID1B	ARID1B	AT-rich interaction domain 1B	57492
+CASKIN1	CASKIN1	CASK interacting protein 1	57524
+ZSWIM6	ZSWIM6	zinc finger SWIM-type containing 6	57688
+PTBP2	PTBP2	polypyrimidine tract binding protein 2	58155
+PRDM12	PRDM12	PR/SET domain 12	59335
+RBM4	RBM4	RNA binding motif protein 4	5936
+DMRTA1	DMRTA1	DMRT like family A1	63951
+IRF2BPL	IRF2BPL	interferon regulatory factor 2 binding protein like	64207
+FBRS	FBRS	fibrosin	64319
+NKX2-4	NKX2-4	NK2 homeobox 4	644524
+TMEM200C	TMEM200C	transmembrane protein 200C	645369
+SLC12A2	SLC12A2	solute carrier family 12 member 2	6558
+FOXL2	FOXL2	forkhead box L2	668
+TBX2	TBX2	T-box 2	6909
+TLE4	TLE4	transducin like enhancer of split 4	7091
+ZBTB8B	ZBTB8B	zinc finger and BTB domain containing 8B	728116
+ZIC3	ZIC3	Zic family member 3	7547
+IRX1	IRX1	iroquois homeobox 1	79192
+BHLHE41	BHLHE41	basic helix-loop-helix family member e41	79365
+TBL1XR1	TBL1XR1	transducin beta like 1 X-linked receptor 1	79718
+PABPN1	PABPN1	poly(A) binding protein nuclear 1	8106
+EOMES	EOMES	eomesodermin	8320
+IRS4	IRS4	insulin receptor substrate 4	8471
+RUNX2	RUNX2	runt related transcription factor 2	860
+CDK13	CDK13	cyclin dependent kinase 13	8621
+PHOX2B	PHOX2B	paired like homeobox 2b	8929
+RPL14	RPL14	ribosomal protein L14	9045
+ZNF804A	ZNF804A	zinc finger protein 804A	91752
+REPS2	REPS2	RALBP1 associated Eps domain containing 2	9185
+LHX2	LHX2	LIM homeobox 2	9355
+HAND2	HAND2	heart and neural crest derivatives expressed 2	9464

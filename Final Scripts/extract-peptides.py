@@ -8,8 +8,8 @@ dstDir = '../data/Uniprot Proteomes/Eukaryotes/'
 
 for filename in os.listdir(dstDir):
     if filename.endswith(".csv"): 
-        #if 'with dilution' in filename:
-        if 'without dilution' in filename:
+        if 'with dilution' in filename:
+        #if 'without dilution' in filename:
             #print filename
             organismName = filename[:filename.find('(')-1]
             colloquialName = filename[filename.find('(')+1:filename.find(')')]
@@ -25,9 +25,9 @@ for filename in os.listdir(dstDir):
                 for row in csvreader:
                     # process each row
                     peptide = row[0]
-                    #if Counter(peptide).most_common(1)[0][1] >= 8:
+                    if Counter(peptide).most_common(1)[0][1] >= 8:
                         # ignore almost-SAARs
-                    #    continue
+                        continue
                     if 'X' not in peptide:
                         peptides.append(peptide)
                         i += 1
@@ -130,7 +130,7 @@ with sns.axes_style("white"):
     plt.show()
     #plt.savefig('outputs/{}/graph - edges for hamming distance {}.png')
     
-
+"""
 sns.set(font_scale=1.8)
 uniform_data = np.array(dist_matrix)
 mask = np.zeros_like(uniform_data)
@@ -144,4 +144,4 @@ with sns.axes_style("white"):
     #ax.figure.tight_layout()
     #ax.figure.subplots_adjust(bottom = 0.22, right = 0.68)
     plt.show()
-
+"""

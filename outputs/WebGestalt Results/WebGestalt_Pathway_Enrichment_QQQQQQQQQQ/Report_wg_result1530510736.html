@@ -1,0 +1,844 @@
+<html>
+<head>
+<title>WebGestalt (WEB-based GEne SeT AnaLysis Toolkit)</title>
+<script type="text/javascript" src="http://www.webgestalt.org/js/jquery.js"></script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/jquery-ui.js"></script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-42098540-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/changeColor.js"></script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/tableExport.js"></script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/jquery.base64.js"></script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/html2canvas.js"></script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/jspdf.js"></script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/jspdf/libs/base64.js"></script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/search.js"></script>
+<script type="text/javascript" src="http://www.webgestalt.org/js/tooltipster.bundle.min.js"></script>
+<script>$(document).ready(function(){$('.tooltip-container').tooltipster({functionInit: function (instance, helper) {var content = $(helper.origin).find('.tooltip_content').detach();instance.content(content);}});});</script>
+<link href="http://www.webgestalt.org/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="http://www.webgestalt.org/css/report.css" rel="stylesheet" type="text/css">
+<link href="http://www.webgestalt.org/css/zebra.css" rel="stylesheet" type="text/css">
+<link href="http://www.webgestalt.org/css/search.css" rel="stylesheet" type="text/css">
+<link href="http://www.webgestalt.org/css/tooltipster.bundle.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<p align="center">
+<iframe src="http://www.webgestalt.org/html/head.html" style="border:0px;height:180px;width:100%"></iframe>
+<div id ="tabs"> <ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#interestGene">User ID Mapping Table</a></li>
+<li><a href="#referenceGene">GOSlim Summary</a></li>
+<li><a href="#result">Enrichment Results</a></li>
+</ul>
+<div id="summary">
+<h3>Summary&nbsp&nbsp&nbsp(<a href="Project_wg_result1530510736.tar.gz" target="_blank" style="color:red"><u>Result Download</u></a>)</h3>
+<b>Enrich method:</b> ORA<br/>
+<b>Organism:</b>hsapiens<br/>
+<b>Enrichment Categories: </b>pathway_KEGG<br/>
+<b>Interesting gene list: </b>textAreaUpload_1530510736.txt. <b>ID type: </b>genesymbol<br/>
+The interesting gene list contains <b>65</b> user IDs in which <b>65</b> user IDs are unambiguously mapped to the unique Entrez Gene IDs and <b>0</b> user IDs are mapped to multiple Entrez Gene IDs or could not be mapped to any Entrez Gene ID. The GO Slim summary are based upon the <b>65</b> unique Entrez Gene IDs.<br/>
+Among the <b>65</b> unique Entrez Gene IDs, <b>23</b> IDs are annotated to the selected functional categories and also in the reference gene list, which are used for the enrichment analysis.<br/>
+<b>Reference gene list: </b> all mapped Entrez Gene IDs from the selected platform genome_protein-coding<br/>
+The reference gene list contains <b>20691</b> IDs and <b> 6979</b> IDs are annotated to the selected functional categories that are used as the reference for the enrichment analysis.<br/>
+<b>Parameters for the enrichment analysis:</b>
+<ul><li><b>Minimum number of Entrez Gene IDs in the category:</b>5</li>
+<li><b>Maximum number of Entrez Gene IDs in the category:</b>2000</li>
+<li><b>FDR Method:</b>BH</li>
+<li><b>Significance Level:</b> Top10</li>
+</ul>
+Based on the above parameters, <b>10</b> categories are identified as enriched categories and all are shown in this report.<br/>
+</div>
+<div id="interestGene">
+<div id="mappedGene">
+<h4>Mapped User IDs</h4>
+<table class="zebra"><thead><tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>MAMLD1</td>
+<td>MAMLD1</td>
+<td>mastermind like domain containing 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=10046">10046</a></td>
+</tr>
+<tr>
+<td>CHERP</td>
+<td>CHERP</td>
+<td>calcium homeostasis endoplasmic reticulum protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=10523">10523</a></td>
+</tr>
+<tr>
+<td>ARID3B</td>
+<td>ARID3B</td>
+<td>AT-rich interaction domain 3B</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=10620">10620</a></td>
+</tr>
+<tr>
+<td>NFAT5</td>
+<td>NFAT5</td>
+<td>nuclear factor of activated T-cells 5</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=10725">10725</a></td>
+</tr>
+<tr>
+<td>RAI1</td>
+<td>RAI1</td>
+<td>retinoic acid induced 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=10743">10743</a></td>
+</tr>
+<tr>
+<td>CELF3</td>
+<td>CELF3</td>
+<td>CUGBP Elav-like family member 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=11189">11189</a></td>
+</tr>
+<tr>
+<td>POU6F2</td>
+<td>POU6F2</td>
+<td>POU class 6 homeobox 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=11281">11281</a></td>
+</tr>
+<tr>
+<td>CREBBP</td>
+<td>CREBBP</td>
+<td>CREB binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=1387">1387</a></td>
+</tr>
+<tr>
+<td>FAM171B</td>
+<td>FAM171B</td>
+<td>family with sequence similarity 171 member B</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=165215">165215</a></td>
+</tr>
+<tr>
+<td>ZNF384</td>
+<td>ZNF384</td>
+<td>zinc finger protein 384</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=171017">171017</a></td>
+</tr>
+<tr>
+<td>ATN1</td>
+<td>ATN1</td>
+<td>atrophin 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=1822">1822</a></td>
+</tr>
+<tr>
+<td>PHC1</td>
+<td>PHC1</td>
+<td>polyhomeotic homolog 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=1911">1911</a></td>
+</tr>
+<tr>
+<td>DCP1B</td>
+<td>DCP1B</td>
+<td>decapping mRNA 1B</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=196513">196513</a></td>
+</tr>
+<tr>
+<td>USF3</td>
+<td>USF3</td>
+<td>upstream transcription factor family member 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=205717">205717</a></td>
+</tr>
+<tr>
+<td>PHLDA1</td>
+<td>PHLDA1</td>
+<td>pleckstrin homology like domain family A member 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=22822">22822</a></td>
+</tr>
+<tr>
+<td>AAK1</td>
+<td>AAK1</td>
+<td>AP2 associated kinase 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=22848">22848</a></td>
+</tr>
+<tr>
+<td>R3HDM2</td>
+<td>R3HDM2</td>
+<td>R3H domain containing 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=22864">22864</a></td>
+</tr>
+<tr>
+<td>ABCF1</td>
+<td>ABCF1</td>
+<td>ATP binding cassette subfamily F member 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=23">23</a></td>
+</tr>
+<tr>
+<td>NCOA6</td>
+<td>NCOA6</td>
+<td>nuclear receptor coactivator 6</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=23054">23054</a></td>
+</tr>
+<tr>
+<td>SIK3</td>
+<td>SIK3</td>
+<td>SIK family kinase 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=23387">23387</a></td>
+</tr>
+<tr>
+<td>TOX3</td>
+<td>TOX3</td>
+<td>TOX high mobility group box family member 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=27324">27324</a></td>
+</tr>
+<tr>
+<td>GLG1</td>
+<td>GLG1</td>
+<td>golgi glycoprotein 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=2734">2734</a></td>
+</tr>
+<tr>
+<td>HTT</td>
+<td>HTT</td>
+<td>huntingtin</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=3064">3064</a></td>
+</tr>
+<tr>
+<td>AR</td>
+<td>AR</td>
+<td>androgen receptor</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=367">367</a></td>
+</tr>
+<tr>
+<td>KCNN3</td>
+<td>KCNN3</td>
+<td>potassium calcium-activated channel subfamily N member 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=3782">3782</a></td>
+</tr>
+<tr>
+<td>MEF2A</td>
+<td>MEF2A</td>
+<td>myocyte enhancer factor 2A</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=4205">4205</a></td>
+</tr>
+<tr>
+<td>ATXN3</td>
+<td>ATXN3</td>
+<td>ataxin 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=4287">4287</a></td>
+</tr>
+<tr>
+<td>ASCL1</td>
+<td>ASCL1</td>
+<td>achaete-scute family bHLH transcription factor 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=429">429</a></td>
+</tr>
+<tr>
+<td>MN1</td>
+<td>MN1</td>
+<td>MN1 proto-oncogene, transcriptional regulator</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=4330">4330</a></td>
+</tr>
+<tr>
+<td>ZFHX3</td>
+<td>ZFHX3</td>
+<td>zinc finger homeobox 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=463">463</a></td>
+</tr>
+<tr>
+<td>MED15</td>
+<td>MED15</td>
+<td>mediator complex subunit 15</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=51586">51586</a></td>
+</tr>
+<tr>
+<td>POLG</td>
+<td>POLG</td>
+<td>DNA polymerase gamma, catalytic subunit</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=5428">5428</a></td>
+</tr>
+<tr>
+<td>POU3F2</td>
+<td>POU3F2</td>
+<td>POU class 3 homeobox 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=5454">5454</a></td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>MAML3</td>
+<td>mastermind like transcriptional coactivator 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=55534">55534</a></td>
+</tr>
+<tr>
+<td>THAP11</td>
+<td>THAP11</td>
+<td>THAP domain containing 11</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=57215">57215</a></td>
+</tr>
+<tr>
+<td>ARID1B</td>
+<td>ARID1B</td>
+<td>AT-rich interaction domain 1B</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=57492">57492</a></td>
+</tr>
+<tr>
+<td>EP400</td>
+<td>EP400</td>
+<td>E1A binding protein p400</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=57634">57634</a></td>
+</tr>
+<tr>
+<td>SATB1</td>
+<td>SATB1</td>
+<td>SATB homeobox 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6304">6304</a></td>
+</tr>
+<tr>
+<td>ATXN1</td>
+<td>ATXN1</td>
+<td>ataxin 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6310">6310</a></td>
+</tr>
+<tr>
+<td>ATXN2</td>
+<td>ATXN2</td>
+<td>ataxin 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6311">6311</a></td>
+</tr>
+<tr>
+<td>ATXN7</td>
+<td>ATXN7</td>
+<td>ataxin 7</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6314">6314</a></td>
+</tr>
+<tr>
+<td>IRF2BPL</td>
+<td>IRF2BPL</td>
+<td>interferon regulatory factor 2 binding protein like</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=64207">64207</a></td>
+</tr>
+<tr>
+<td>SMARCA2</td>
+<td>SMARCA2</td>
+<td>SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6595">6595</a></td>
+</tr>
+<tr>
+<td>TBP</td>
+<td>TBP</td>
+<td>TATA-box binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6908">6908</a></td>
+</tr>
+<tr>
+<td>TFCP2</td>
+<td>TFCP2</td>
+<td>transcription factor CP2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=7024">7024</a></td>
+</tr>
+<tr>
+<td>ATXN8</td>
+<td>ATXN8</td>
+<td>ataxin 8</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=724066">724066</a></td>
+</tr>
+<tr>
+<td>FAM157A</td>
+<td>FAM157A</td>
+<td>family with sequence similarity 157 member A</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=728262">728262</a></td>
+</tr>
+<tr>
+<td>TMEM229A</td>
+<td>TMEM229A</td>
+<td>transmembrane protein 229A</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=730130">730130</a></td>
+</tr>
+<tr>
+<td>VEZF1</td>
+<td>VEZF1</td>
+<td>vascular endothelial zinc finger 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=7716">7716</a></td>
+</tr>
+<tr>
+<td>CACNA1A</td>
+<td>CACNA1A</td>
+<td>calcium voltage-gated channel subunit alpha1 A</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=773">773</a></td>
+</tr>
+<tr>
+<td>TFEB</td>
+<td>TFEB</td>
+<td>transcription factor EB</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=7942">7942</a></td>
+</tr>
+<tr>
+<td>KMT2D</td>
+<td>KMT2D</td>
+<td>lysine methyltransferase 2D</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=8085">8085</a></td>
+</tr>
+<tr>
+<td>ST6GALNAC5</td>
+<td>ST6GALNAC5</td>
+<td>ST6 N-acetylgalactosaminide alpha-2,6-sialyltransferase 5</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=81849">81849</a></td>
+</tr>
+<tr>
+<td>NCOA3</td>
+<td>NCOA3</td>
+<td>nuclear receptor coactivator 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=8202">8202</a></td>
+</tr>
+<tr>
+<td>MAML2</td>
+<td>MAML2</td>
+<td>mastermind like transcriptional coactivator 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=84441">84441</a></td>
+</tr>
+<tr>
+<td>FRMPD3</td>
+<td>FRMPD3</td>
+<td>FERM and PDZ domain containing 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=84443">84443</a></td>
+</tr>
+<tr>
+<td>RUNX2</td>
+<td>RUNX2</td>
+<td>runt related transcription factor 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=860">860</a></td>
+</tr>
+<tr>
+<td>LIN7A</td>
+<td>LIN7A</td>
+<td>lin-7 homolog A, crumbs cell polarity complex component</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=8825">8825</a></td>
+</tr>
+<tr>
+<td>TSC22D1</td>
+<td>TSC22D1</td>
+<td>TSC22 domain family member 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=8848">8848</a></td>
+</tr>
+<tr>
+<td>MAGI1</td>
+<td>MAGI1</td>
+<td>membrane associated guanylate kinase, WW and PDZ domain containing 1</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=9223">9223</a></td>
+</tr>
+<tr>
+<td>NUMBL</td>
+<td>NUMBL</td>
+<td>NUMB like, endocytic adaptor protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=9253">9253</a></td>
+</tr>
+<tr>
+<td>FOXP2</td>
+<td>FOXP2</td>
+<td>forkhead box P2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=93986">93986</a></td>
+</tr>
+<tr>
+<td>NCOR2</td>
+<td>NCOR2</td>
+<td>nuclear receptor corepressor 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=9612">9612</a></td>
+</tr>
+<tr>
+<td>DENND4B</td>
+<td>DENND4B</td>
+<td>DENN domain containing 4B</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=9909">9909</a></td>
+</tr>
+<tr>
+<td>MED12</td>
+<td>MED12</td>
+<td>mediator complex subunit 12</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=9968">9968</a></td>
+</tr>
+</tbody></table>
+</div>
+<div id="empty">&nbsp&nbsp&nbsp&nbsp</div>
+<div id="unmappedGene">
+<h4>User IDs mapped to multiple Entrtez IDs or not mapped</h4>
+<table class="zebra"><thead><tr>
+<th>userid</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>NA</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div id="referenceGene">
+<h4>GOSlim summary for the user list genes</h4>
+Each Biological Process, Cellular Component and Molecular Function category is represented by a red, blue and green bar, repectively.<br/>
+The height of the bar represents the number of user list genes observed in the category.
+<img src="goslim_summary_wg_result1530510736.png" width="100%" height="100%"/></div>
+<div id="result">
+<div id="dag">
+<h4>Summary of the enriched categories</h4>
+This table lists the enriched categories, number of entrez genes in the user gene list and also in the categories and FDR.<br/><br/>
+<table class="zebra"><thead><tr>
+<th>ID</th><th>Name</th><th>#Gene</th><th>FDR</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><a href="#hsa04330" style="color:black">hsa04330</a></td>
+<td><font color="black">Notch signaling pathway - Homo sapiens (human)</font></td>
+<td><font color="black">5</font></td>
+<td><font color="black">1.15e-04</font></td>
+</tr>
+<tr>
+<td><a href="#hsa04919" style="color:black">hsa04919</a></td>
+<td><font color="black">Thyroid hormone signaling pathway - Homo sapiens (human)</font></td>
+<td><font color="black">3</font></td>
+<td><font color="black">9.88e-01</font></td>
+</tr>
+<tr>
+<td><a href="#hsa05016" style="color:black">hsa05016</a></td>
+<td><font color="black">Huntington's disease - Homo sapiens (human)</font></td>
+<td><font color="black">3</font></td>
+<td><font color="black">1e+00</font></td>
+</tr>
+<tr>
+<td><a href="#hsa05169" style="color:black">hsa05169</a></td>
+<td><font color="black">Epstein-Barr virus infection - Homo sapiens (human)</font></td>
+<td><font color="black">3</font></td>
+<td><font color="black">1e+00</font></td>
+</tr>
+<tr>
+<td><a href="#hsa05215" style="color:black">hsa05215</a></td>
+<td><font color="black">Prostate cancer - Homo sapiens (human)</font></td>
+<td><font color="black">2</font></td>
+<td><font color="black">1e+00</font></td>
+</tr>
+<tr>
+<td><a href="#hsa04658" style="color:black">hsa04658</a></td>
+<td><font color="black">Th1 and Th2 cell differentiation - Homo sapiens (human)</font></td>
+<td><font color="black">2</font></td>
+<td><font color="black">1e+00</font></td>
+</tr>
+<tr>
+<td><a href="#hsa00604" style="color:black">hsa00604</a></td>
+<td><font color="black">Glycosphingolipid biosynthesis - ganglio series - Homo sapiens (human)</font></td>
+<td><font color="black">1</font></td>
+<td><font color="black">1e+00</font></td>
+</tr>
+<tr>
+<td><a href="#hsa05168" style="color:black">hsa05168</a></td>
+<td><font color="black">Herpes simplex infection - Homo sapiens (human)</font></td>
+<td><font color="black">2</font></td>
+<td><font color="black">1e+00</font></td>
+</tr>
+<tr>
+<td><a href="#hsa05033" style="color:black">hsa05033</a></td>
+<td><font color="black">Nicotine addiction - Homo sapiens (human)</font></td>
+<td><font color="black">1</font></td>
+<td><font color="black">1e+00</font></td>
+</tr>
+<tr>
+<td><a href="#hsa03022" style="color:black">hsa03022</a></td>
+<td><font color="black">Basal transcription factors - Homo sapiens (human)</font></td>
+<td><font color="black">1</font></td>
+<td><font color="black">1e+00</font></td>
+</tr>
+</tbody></table>
+</div>
+<div id="empty1">&nbsp&nbsp&nbsp&nbsp</div>
+<div id="genelist_wrap">
+<div id="genelist_des">
+<h4>Detailed information of the enriched categories</h4>
+<div class="tooltip_templates">The statistics
+<a class="tooltip-container"><img src="http://www.webgestalt.org/images/info.png" width="13" height="13"/>
+<span class="tooltip_content"><strong><ul><li>C: the number of reference genes in the category</li><li>O: the number of genes in the user gene list and also in the category</li><li>E: The expected number in the category</li><li>R: ratio of enrichment</li><li>PValue: p value from hyergeometric test</li><li>FDR: FDR from BH</li></ul></strong></span></a>
+ for the enriched categories and the genes in the user gene list and also in the category are listed in the table. <br/></div>
+<div class="search"><input id="tags" type="text" name="q" placeholder="ID Search"><ul id="searchData"><li><a id="aid0" href="#hsa04330">hsa04330 Notch signaling pathway - Homo sapiens (human)</a></li><li><a id="aid1" href="#hsa04919">hsa04919 Thyroid hormone signaling pathway - Homo sapiens (human)</a></li><li><a id="aid2" href="#hsa05016">hsa05016 Huntington's disease - Homo sapiens (human)</a></li><li><a id="aid3" href="#hsa05169">hsa05169 Epstein-Barr virus infection - Homo sapiens (human)</a></li><li><a id="aid4" href="#hsa05215">hsa05215 Prostate cancer - Homo sapiens (human)</a></li><li><a id="aid5" href="#hsa04658">hsa04658 Th1 and Th2 cell differentiation - Homo sapiens (human)</a></li><li><a id="aid6" href="#hsa00604">hsa00604 Glycosphingolipid biosynthesis - ganglio series - Homo sapiens (human)</a></li><li><a id="aid7" href="#hsa05168">hsa05168 Herpes simplex infection - Homo sapiens (human)</a></li><li><a id="aid8" href="#hsa05033">hsa05033 Nicotine addiction - Homo sapiens (human)</a></li><li><a id="aid9" href="#hsa03022">hsa03022 Basal transcription factors - Homo sapiens (human)</a></li></ul></div>
+</div>
+<br/>
+<div id="genelist">
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table1').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table1" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa04330"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa04330+1387+55534+84441+9253+9612" target="_blank"><b>ID:hsa04330&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Notch signaling pathway - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=48; O=5; E=0.16; R=31.61; PValue=3.81e-07; FDR=1.15e-04</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CREBBP</td>
+<td>CREBBP</td>
+<td>CREB binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=1387">1387</a></td>
+</tr>
+<tr>
+<td>MAML3</td>
+<td>MAML3</td>
+<td>mastermind like transcriptional coactivator 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=55534">55534</a></td>
+</tr>
+<tr>
+<td>MAML2</td>
+<td>MAML2</td>
+<td>mastermind like transcriptional coactivator 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=84441">84441</a></td>
+</tr>
+<tr>
+<td>NUMBL</td>
+<td>NUMBL</td>
+<td>NUMB like, endocytic adaptor protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=9253">9253</a></td>
+</tr>
+<tr>
+<td>NCOR2</td>
+<td>NCOR2</td>
+<td>nuclear receptor corepressor 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=9612">9612</a></td>
+</tr>
+</tbody></table><br/><br/>
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table2').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table2" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa04919"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa04919+1387+8202+9968" target="_blank"><b>ID:hsa04919&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Thyroid hormone signaling pathway - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=118; O=3; E=0.39; R=7.71; PValue=6.52e-03; FDR=9.88e-01</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CREBBP</td>
+<td>CREBBP</td>
+<td>CREB binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=1387">1387</a></td>
+</tr>
+<tr>
+<td>NCOA3</td>
+<td>NCOA3</td>
+<td>nuclear receptor coactivator 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=8202">8202</a></td>
+</tr>
+<tr>
+<td>MED12</td>
+<td>MED12</td>
+<td>mediator complex subunit 12</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=9968">9968</a></td>
+</tr>
+</tbody></table><br/><br/>
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table3').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table3" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa05016"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa05016+1387+3064+6908" target="_blank"><b>ID:hsa05016&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Huntington's disease - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=193; O=3; E=0.64; R=4.72; PValue=2.45e-02; FDR=1e+00</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CREBBP</td>
+<td>CREBBP</td>
+<td>CREB binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=1387">1387</a></td>
+</tr>
+<tr>
+<td>HTT</td>
+<td>HTT</td>
+<td>huntingtin</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=3064">3064</a></td>
+</tr>
+<tr>
+<td>TBP</td>
+<td>TBP</td>
+<td>TATA-box binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6908">6908</a></td>
+</tr>
+</tbody></table><br/><br/>
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table4').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table4" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa05169"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa05169+1387+6908+9612" target="_blank"><b>ID:hsa05169&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Epstein-Barr virus infection - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=204; O=3; E=0.67; R=4.46; PValue=2.83e-02; FDR=1e+00</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CREBBP</td>
+<td>CREBBP</td>
+<td>CREB binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=1387">1387</a></td>
+</tr>
+<tr>
+<td>TBP</td>
+<td>TBP</td>
+<td>TATA-box binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6908">6908</a></td>
+</tr>
+<tr>
+<td>NCOR2</td>
+<td>NCOR2</td>
+<td>nuclear receptor corepressor 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=9612">9612</a></td>
+</tr>
+</tbody></table><br/><br/>
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table5').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table5" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa05215"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa05215+1387+367" target="_blank"><b>ID:hsa05215&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Prostate cancer - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=89; O=2; E=0.29; R=6.82; PValue=3.42e-02; FDR=1e+00</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CREBBP</td>
+<td>CREBBP</td>
+<td>CREB binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=1387">1387</a></td>
+</tr>
+<tr>
+<td>AR</td>
+<td>AR</td>
+<td>androgen receptor</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=367">367</a></td>
+</tr>
+</tbody></table><br/><br/>
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table6').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table6" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa04658"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa04658+55534+84441" target="_blank"><b>ID:hsa04658&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Th1 and Th2 cell differentiation - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=92; O=2; E=0.3; R=6.6; PValue=3.63e-02; FDR=1e+00</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>MAML3</td>
+<td>MAML3</td>
+<td>mastermind like transcriptional coactivator 3</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=55534">55534</a></td>
+</tr>
+<tr>
+<td>MAML2</td>
+<td>MAML2</td>
+<td>mastermind like transcriptional coactivator 2</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=84441">84441</a></td>
+</tr>
+</tbody></table><br/><br/>
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table7').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table7" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa00604"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa00604+81849" target="_blank"><b>ID:hsa00604&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Glycosphingolipid biosynthesis - ganglio series - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=15; O=1; E=0.05; R=20.23; PValue=4.84e-02; FDR=1e+00</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ST6GALNAC5</td>
+<td>ST6GALNAC5</td>
+<td>ST6 N-acetylgalactosaminide alpha-2,6-sialyltransferase 5</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=81849">81849</a></td>
+</tr>
+</tbody></table><br/><br/>
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table8').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table8" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa05168"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa05168+1387+6908" target="_blank"><b>ID:hsa05168&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Herpes simplex infection - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=185; O=2; E=0.61; R=3.28; PValue=1.23e-01; FDR=1e+00</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CREBBP</td>
+<td>CREBBP</td>
+<td>CREB binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=1387">1387</a></td>
+</tr>
+<tr>
+<td>TBP</td>
+<td>TBP</td>
+<td>TATA-box binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6908">6908</a></td>
+</tr>
+</tbody></table><br/><br/>
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table9').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table9" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa05033"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa05033+773" target="_blank"><b>ID:hsa05033&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Nicotine addiction - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=40; O=1; E=0.13; R=7.59; PValue=1.24e-01; FDR=1e+00</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>CACNA1A</td>
+<td>CACNA1A</td>
+<td>calcium voltage-gated channel subunit alpha1 A</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=773">773</a></td>
+</tr>
+</tbody></table><br/><br/>
+<div><nav class="cl-effect-1"><a style="cursor:pointer;color:red;" onclick="$('#Table10').tableExport({type:'csv',escape:'false'});">Download Table</a></nav></div><table id="Table10" class="zebra"><thead><tr>
+<th colspan="4">
+<a name="hsa03022"><font color="black"><a href ="http://www.kegg.jp/kegg-bin/show_pathway?hsa03022+6908" target="_blank"><b>ID:hsa03022&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName:Basal transcription factors - Homo sapiens (human)</b></a></font></a>
+</th></tr>
+<tr><th colspan="4">
+C=45; O=1; E=0.15; R=6.74; PValue=1.38e-01; FDR=1e+00</th></tr>
+<tr>
+<th>userid</th>
+<th>Gene Symbol</th>
+<th>Gene Name</th>
+<th>Entrez Gene</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>TBP</td>
+<td>TBP</td>
+<td>TATA-box binding protein</td>
+<td><a target="entrez" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=gene&cmd=Retrieve&dopt=Graphics&list_uids=6908">6908</a></td>
+</tr>
+</tbody></table><br/><br/>
+</div>
+</div>
+</div>
+</div>
+<script>$( "#tabs" ).tabs();</script><iframe src="http://www.webgestalt.org/html/foot.html" style="border:0px;height:130px;width:100%"></iframe>
+</body></html>

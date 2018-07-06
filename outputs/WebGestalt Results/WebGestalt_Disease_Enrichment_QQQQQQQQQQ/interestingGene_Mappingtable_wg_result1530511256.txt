@@ -1,0 +1,66 @@
+userid	genesymbol	genename	entrezgene
+MAMLD1	MAMLD1	mastermind like domain containing 1	10046
+CHERP	CHERP	calcium homeostasis endoplasmic reticulum protein	10523
+ARID3B	ARID3B	AT-rich interaction domain 3B	10620
+NFAT5	NFAT5	nuclear factor of activated T-cells 5	10725
+RAI1	RAI1	retinoic acid induced 1	10743
+CELF3	CELF3	CUGBP Elav-like family member 3	11189
+POU6F2	POU6F2	POU class 6 homeobox 2	11281
+CREBBP	CREBBP	CREB binding protein	1387
+FAM171B	FAM171B	family with sequence similarity 171 member B	165215
+ZNF384	ZNF384	zinc finger protein 384	171017
+ATN1	ATN1	atrophin 1	1822
+PHC1	PHC1	polyhomeotic homolog 1	1911
+DCP1B	DCP1B	decapping mRNA 1B	196513
+USF3	USF3	upstream transcription factor family member 3	205717
+PHLDA1	PHLDA1	pleckstrin homology like domain family A member 1	22822
+AAK1	AAK1	AP2 associated kinase 1	22848
+R3HDM2	R3HDM2	R3H domain containing 2	22864
+ABCF1	ABCF1	ATP binding cassette subfamily F member 1	23
+NCOA6	NCOA6	nuclear receptor coactivator 6	23054
+SIK3	SIK3	SIK family kinase 3	23387
+TOX3	TOX3	TOX high mobility group box family member 3	27324
+GLG1	GLG1	golgi glycoprotein 1	2734
+HTT	HTT	huntingtin	3064
+AR	AR	androgen receptor	367
+KCNN3	KCNN3	potassium calcium-activated channel subfamily N member 3	3782
+MEF2A	MEF2A	myocyte enhancer factor 2A	4205
+ATXN3	ATXN3	ataxin 3	4287
+ASCL1	ASCL1	achaete-scute family bHLH transcription factor 1	429
+MN1	MN1	MN1 proto-oncogene, transcriptional regulator	4330
+ZFHX3	ZFHX3	zinc finger homeobox 3	463
+MED15	MED15	mediator complex subunit 15	51586
+POLG	POLG	DNA polymerase gamma, catalytic subunit	5428
+POU3F2	POU3F2	POU class 3 homeobox 2	5454
+MAML3	MAML3	mastermind like transcriptional coactivator 3	55534
+THAP11	THAP11	THAP domain containing 11	57215
+ARID1B	ARID1B	AT-rich interaction domain 1B	57492
+EP400	EP400	E1A binding protein p400	57634
+SATB1	SATB1	SATB homeobox 1	6304
+ATXN1	ATXN1	ataxin 1	6310
+ATXN2	ATXN2	ataxin 2	6311
+ATXN7	ATXN7	ataxin 7	6314
+IRF2BPL	IRF2BPL	interferon regulatory factor 2 binding protein like	64207
+SMARCA2	SMARCA2	SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2	6595
+TBP	TBP	TATA-box binding protein	6908
+TFCP2	TFCP2	transcription factor CP2	7024
+ATXN8	ATXN8	ataxin 8	724066
+FAM157A	FAM157A	family with sequence similarity 157 member A	728262
+TMEM229A	TMEM229A	transmembrane protein 229A	730130
+VEZF1	VEZF1	vascular endothelial zinc finger 1	7716
+CACNA1A	CACNA1A	calcium voltage-gated channel subunit alpha1 A	773
+TFEB	TFEB	transcription factor EB	7942
+KMT2D	KMT2D	lysine methyltransferase 2D	8085
+ST6GALNAC5	ST6GALNAC5	ST6 N-acetylgalactosaminide alpha-2,6-sialyltransferase 5	81849
+NCOA3	NCOA3	nuclear receptor coactivator 3	8202
+MAML2	MAML2	mastermind like transcriptional coactivator 2	84441
+FRMPD3	FRMPD3	FERM and PDZ domain containing 3	84443
+RUNX2	RUNX2	runt related transcription factor 2	860
+LIN7A	LIN7A	lin-7 homolog A, crumbs cell polarity complex component	8825
+TSC22D1	TSC22D1	TSC22 domain family member 1	8848
+MAGI1	MAGI1	membrane associated guanylate kinase, WW and PDZ domain containing 1	9223
+NUMBL	NUMBL	NUMB like, endocytic adaptor protein	9253
+FOXP2	FOXP2	forkhead box P2	93986
+NCOR2	NCOR2	nuclear receptor corepressor 2	9612
+DENND4B	DENND4B	DENN domain containing 4B	9909
+MED12	MED12	mediator complex subunit 12	9968

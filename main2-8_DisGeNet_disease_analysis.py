@@ -44,7 +44,7 @@ for i in xrange(50):
     print "================================"
     human_genes = [g.strip() for g in open('data/Homo Sapiens - all genes.txt','r').readlines()]
     import random
-    genes_containing_freq_kmers = random.sample(set(human_genes), 50)
+    genes_containing_freq_kmers = random.sample(set(human_genes), 100)
     print genes_containing_freq_kmers
 
     for diseaseId in disease_gene_mapping:
